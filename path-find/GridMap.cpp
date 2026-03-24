@@ -24,3 +24,11 @@ void GridMap::ReadFile()
 
 
 }
+
+bool GridMap::isFree(float x, float y) const
+{
+	int col = x / resolution;
+	int row = y / resolution;
+	int index = row * width + col;
+	return map_data[index];
+}
