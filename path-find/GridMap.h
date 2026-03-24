@@ -14,6 +14,7 @@ public:
 	std::vector<bool> map_data;
 	GridMap(std::string& map_path, float res);
 	void ReadFile();
+	bool isFree(float x, float y) const;
 
 };
 
