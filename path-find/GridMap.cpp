@@ -32,3 +32,21 @@ bool GridMap::isFree(float x, float y) const
 	int index = row * width + col;
 	return map_data[index];
 }
+
+bool GridMap::isCollision(float x, float y, float degree) const
+{
+	
+	int l_checkPoint[] = { -L / 2,0.0f,L / 2 };
+	int w_checkPoint[] = { -W / 2, 0.0f , W / 2 };
+	for (float lx : l_checkPoint) {
+		for (float ly : w_checkPoint) {
+			float wx = x + lx * cos(degree) - ly * sin(degree);
+			float wy = y + lx * sin(degree) + ly * cos(degree);
+			if (!isFree(wx, wy)) return true;
+		}
+		
+	}
+	return false;
+}
+
+
