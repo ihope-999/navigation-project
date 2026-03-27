@@ -19,7 +19,8 @@ void GridMap::ReadFile()
 	for (int i = 0; i < total_size; i++) {
 		int curr_val;
 		file >> curr_val;
-		map_data[i] = (curr_val > 0); // bigger than 0 means white 
+		bool val = (curr_val > 0); // bigger than 0 means white 
+		map_data.push_back(val);
 	}
 
 
