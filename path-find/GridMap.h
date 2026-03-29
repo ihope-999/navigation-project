@@ -18,7 +18,7 @@ public:
 	bool isCollision(float x, float y, float degree) const;
 
 private:
-	const float L = 5.0f;
+	const float L = 6.0f;
 	const float W = 3.0f;
 };
 
